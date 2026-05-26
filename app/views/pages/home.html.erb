@@ -1,5 +1,17 @@
-<%= render "shared/navbar" %>
-<%= render  "shared/form" %>
-<%= render "shared/card" %>
 
-<%= render "shared/footer" %>
+<%= render  "shared/form" %>
+<div class="global-llm">
+  <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Afficher AI CustomRules
+  </a>
+</div>
+<div class="game-card-main d-flex">
+  <% @games.each do |game| %>
+  <%= render "shared/card", game:game %>
+  <% end %>
+</div>
+
+
+<%# @flats.each do |flat| %>
+<%#= render "shared/card", flat:flat %>
+<%# end %>
