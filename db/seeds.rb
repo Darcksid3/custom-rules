@@ -7,3 +7,30 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+puts "Cleaning database..."
+Game.destroy_all
+
+puts "Creating games..."
+Game.create!(
+  name: "Monopoly",
+  nb_players: 6
+)
+
+Game.create!(
+  name: "Skyjo",
+  nb_players: 8
+)
+
+Game.create!(
+  name: "Br-Uno",
+  nb_players: 10
+)
+
+Game.create!(
+  name: "Scrabble",
+  nb_players: 4
+)
+
+puts "Finished!"
