@@ -25,7 +25,7 @@
 
   <body>
     <div class="contain-total">
-    <%= render "shared/navbar" %>
+    <%= render "shared/navbar", url_ok:@url_ok %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>

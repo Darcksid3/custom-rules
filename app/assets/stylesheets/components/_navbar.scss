@@ -1,8 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
   color: $white;
-  background-color: $purple;
+  background: #694D93;
+  background: linear-gradient(180deg,$purple 80%, $green 100%);
   position: sticky;
   top: 0;
   z-index: 1000;
