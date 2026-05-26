@@ -3,7 +3,15 @@ Rails.application.routes.draw do
   # GET /games
   # GET /games/:id
   resources :games, only: [:index, :show]
-  
+
+  resources :games, only: [:index, :show] do
+    resources :conversations, only: [:new, :create]
+  end
+
+  resources :conversations, only: [:show] do
+    resources :messages, only: [:create]
+  end
+
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
