@@ -24,7 +24,7 @@ Game.create!(
 )
 
 Game.create!(
-  name: "Uno",
+  name: "Br-Uno",
   nb_players: 10
 )
 
