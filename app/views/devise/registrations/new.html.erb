@@ -20,5 +20,10 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+     <%= f.button :submit, 'Sign-up', class: 'btn btn-danger mb-3' %>
+  <% end %>
   </div>
+
+  <%= link_to "I have a acount, sign-in", user_session_path, class: "text-decoration-none text-dark" %>
+
 </div>
