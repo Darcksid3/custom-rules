@@ -5,14 +5,15 @@
   height: 100px;
   padding: 0px 50px;
   color: $white;
-  border-top: 1px solid $gray;
-  background-color: $purple;
+  // border-top: 1px solid $gray;
+  background: $purple;
+  background: linear-gradient(0deg,$purple 80%, $green 100%);
   margin-top: 15px;
   position: sticky;
   bottom: 0;
   z-index: 1000;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+  // backdrop-filter: blur(10px);
+  // box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
 
 }
 .footer-links {
