@@ -2,16 +2,47 @@
 
   width: 60%;
   margin: auto;
+  position: sticky;
+  top:115px;
+  z-index: 1000;
   padding: 10px 10px 10px 10px;
   border: 2px solid $gray;
   text-align: center;
   display: flex;
-  flex: revert;
   justify-content:space-between;
   align-items: center;
+  background-color: $white;
 }
 
-.title-conversation {
+.list-group-item {
   text-align: end;
   padding-right: 15px;
+  background-color: $green;
+  opacity: 0.55;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.list-group {
+  border-radius: 15px 15px 15px 15px;
+  gap:10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.global-llm {
+width:100%;
+text-align: center;
+margin-top: 5px;
+}
+.btn {
+  color:$black;
+  background-color: yellowgreen;
+  opacity: 0.6;
+  border: 2px solid ;
+  border-radius: 15px;
+
+  &:hover {
+    opacity: 0.9;
+    border: 2px solid darkolivegreen;
+  }
 }
