@@ -1,13 +1,18 @@
 .footer {
-  background: $purple;
-  background: linear-gradient( $green, $purple);
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
   color: $white;
-  border-top: 1px;
+  border-top: 1px solid $gray;
+  background-color: $purple;
+  margin-top: 15px;
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
 
 }
 .footer-links {
@@ -15,7 +20,7 @@
   align-items: center;
 
   a {
-  color: #6A4C93;
+  color: $gray;
   opacity: 0.25;
   text-decoration: none;
   font-size: 24px;

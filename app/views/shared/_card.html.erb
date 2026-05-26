@@ -1,8 +1,32 @@
-<div class="card" style="width: 18rem;">
+
+
+<!-- <div class="card game-card" style="width: 18rem;"> -->
+  <!-- <div class="card-body"> -->
+    <!-- <h5 class="card-title"> <%#= game.name %></h5> -->
+    <!-- <h6 class="card-subtitle mb-2 text-body-secondary">  </h6> -->
+    <!-- <p class="card-text "><i class="fa-solid fa-dice"></i> Nombre de joueurs :  <%#= game.nb_players %></p> -->
+
+    <!-- <span class="fs-6"></span> <%#= link_to "", game_path(game), class:"fa-solid fa-ellipsis", title:"View more : #{game.name}" %> -->
+    <!-- <span class="fs-6">view more</span> <a href="#" class="card-link" Alt="Accéder au détail du jeu" title="<%#= game.name %>" ><i class="fa-solid fa-ellipsis"></i> </a> -->
+  <!-- </div> -->
+<!-- </div> -->
+
+
+<div class="card game-card" style="width: 18rem;">
+<% case game.name %>
+<% when "Monopoly" %>
+<%= image_tag("https://cdn.cultura.com/cdn-cgi/image/width=1280/media/pim/23_244147_1_10_FR.jpg", width: "45%", class:"pt-2") %>
+<% when "Skyjo" %>
+<%= image_tag("https://cdn.cultura.com/cdn-cgi/image/width=1280/media/pim/3017472_1njprxew_1", width: "45%", class:"pt-2") %>
+<% when "Br-Uno" %>
+<%= image_tag("https://m.media-amazon.com/images/I/71n61AtC+VL._AC_SL1500_.jpg", width: "45%", class:"pt-2") %>
+<% when "Scrabble" %>
+<%= image_tag("https://cdn.cultura.com/cdn-cgi/image/width=1280/media/pim/77_241905_1_10_FR.jpg", width: "45%", class:"pt-2") %>
+  <!-- <img src="..." class="card-img-top" alt="..."> -->
+  <% end %>
   <div class="card-body">
-    <h5 class="card-title"> game.name</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">  </h6>
-    <p class="card-text "><i class="fa-solid fa-dice"></i> Nombre de joueurs :  game.nb_ players.</p>
-    <span class="fs-6">view more</span> <a href="#" class="card-link" Alt="Accéder au détail du jeu" title="game.name" ><i class="fa-solid fa-ellipsis"></i> </a>
+    <h5 class="card-title"> <%= game.name %></h5>
+    <p class="card-text">Nombre de joueurs :  <%= game.nb_players %></p>
+    <span class="fs-6"></span> <%= link_to "", game_path(game), class:"fa-solid fa-ellipsis", title:"View more : #{game.name}" %>
   </div>
 </div>

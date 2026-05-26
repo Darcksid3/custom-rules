@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
+  get "custom_rules/create"
+  get "custom_rules/show"
   # Generated routes:
   # GET /games
   # GET /games/:id
-  resources :games, only: [:index, :show]
-  
+  resources :games, only: [:index, :show] do
+    resources :conversations, only: [:new, :create]
+  end
+
+  resources :conversations, only: [:show] do
+    resources :messages, only: [:create]
+  end
+
+  resources :custom_rules, only: [:create, :show]
+
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -18,8 +28,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-
-
-
 
 end

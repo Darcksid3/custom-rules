@@ -1,8 +1,14 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $purple;
+  background: white;
   color: $white;
-  background: linear-gradient($purple, $green);
+  background-color: $purple;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
 }
 
 .navbar-lewagon .navbar-collapse {
