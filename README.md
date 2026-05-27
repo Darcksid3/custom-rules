@@ -3,7 +3,7 @@
 
 ## Description
 
-_Ce projet collaboratif permet a des utilisateur des règles personalisé grace a notre agent IA_
+_Ce projet collaboratif permet a des utilisateur des règles personalisé sur les jeux de société, grace à notre agent IA_
 
 <hr>
 
