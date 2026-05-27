@@ -33,6 +33,9 @@
 width:100%;
 text-align: center;
 margin-top: 15px;
+position: sticky;
+top: 65px;
+z-index: 1000;
 }
 .btn {
   color:$black;
