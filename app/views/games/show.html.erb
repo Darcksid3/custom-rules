@@ -1,8 +1,40 @@
 <!-- path: <p>Find me in app/views/games/show.html.erb</p> -->
-<div class="container">
-  <h1 class="mt-5"><%= @game.name %></h1>
-  <p>
-    Nombre de joueurs:
-    <%= @game.nb_players %>
-  </p>
+<div class="container" style="background-color:white;">
+  <div class="row">
+    
+    <div class="col">
+      <h1 class="mt-5"><%= @game.name %></h1>
+        <div class="col">
+        
+        <p>
+          Nombre de joueurs:
+          <%= @game.nb_players %>
+        </p>
+        <div>
+          <p>
+            Créez tes règles personalisé grace à notre agent 
+            > <%#= link_to "Rules Bot", game_conversations_path(@game), data: { turbo_method: :post } %>
+            <%= button_to "New chat", game_conversations_path(@game), class: "btn btn-primary" %>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3">
+      <h2>conversation</h2>
+      <div class="mb-4">
+        <%# if @conversation.any? %>
+          <ul>
+            <%# @conversations.each do |conversation| %>
+              <li><%#= link_to conversation.title, conversation_path(chat) %></li>
+            <%# end %>
+          </ul>
+        <%# else %>
+          // // There are no conversation yet.
+        <%# end %>
+      </div>
+    </div>
+
+    
+  </div>
 </div>

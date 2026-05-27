@@ -1,10 +1,29 @@
 <h1>Conversations#show</h1>
-<p>Find me in app/views/conversations/show.html.erb</p>
+<%= link_to "← #{@conversation.game.name}", game_path(@conversation.game) %>
 
-<% @conversation.messages.each do |message| %>
-    <p><%= message.content %></p>
-<% end %>
+<div id="messages">
+  <% @conversation.messages.each do |message| %>
+    <% if message.role == "user" %>
+      <div class="d-flex justify-content-end mb-2">
+        <div class="bg-white px-3 pb-0 pt-3 rounded-pill">
+          <%= raw(render_markdown(message.content)) %>
+					<%#= message.content %>
+        </div>
+      </div>
+    <% elsif message.role == "assistant" %>
+      <div class="d-flex justify-content-start mb-5">
+        <div class="px-3 pb-0 pt-3">
+          <%#= raw(render_markdown(message.content)) %>
+					<%= message.content %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
 
-<div>
-    <%#= render "messages/new" %>
+<div id="new_message_container">
+  <%= simple_form_for [@conversation, @message] do |f| %>
+    <%= f.input :content, label: "Ask a question", required: true, placeholder: "crée un nouvelle règle?" %>
+    <%= f.button :submit, 'Demander au bot', class: 'btn btn-primary' %>
+  <% end %>
 </div>
