@@ -1,5 +1,6 @@
 <div class="container my-5">
   <h2>Log in</h2>
+  <%= render "shared/flashes_ko" %>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
