@@ -1,23 +1,19 @@
-.notice {
-  border: 2px solid darkgreen;
-  color: $black;
-  font-weight: 900;
-  width: 50%;
-  text-align: center;
-  // position: fixed;
-  // top: 75px;
-  // right: 25px;
-  // z-index: 1000;
+.alert {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  opacity:0.8;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin: 8px;
 }
 
-.alert {
-  border: 2px solid $red;
-  color: $red;
-  font-weight: 900;
-  width: 50%;
-  text-align: center;
-  // position: fixed;
-  // top: 75px;
-  // right: 25px;
-  // z-index: 1000;
+.alert-success {
+  border: 2px solid #1EDD88;
+}
+
+.alert-danger {
+  border: 2px solid #FD1015;
 }

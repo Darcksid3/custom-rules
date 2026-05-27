@@ -1,0 +1,23 @@
+
+ <%# if user_signed_in? %>
+
+<!-- <div class="flash flash-success alert alert-dismissible fade show" role="alert"> -->
+  <!-- <span><strong>Yay!</strong> 🎉 <%#= current_user.username %> bienvenue ! 👋.</span> -->
+  <!-- <a data-bs-dismiss="alert" aria-label="Close"> -->
+    <!-- <i class="fas fa-times"></i> -->
+  <!-- </a> -->
+<!-- </div> -->
+<%# else %>
+<!-- <div class="flash flash-danger alert alert-dismissible fade show" role="alert"> -->
+  <!-- <span><strong>Oops!</strong> 😱 Le mail ou le mot de passe semble erroné.</span> -->
+  <!-- <a data-bs-dismiss="alert" aria-label="Close"> -->
+    <!-- <i class="fas fa-times"></i> -->
+  <!-- </a> -->
+<!-- </div> -->
+<%# end %>
+
+<% if flash[:notice] %>
+<div class="alert alert-success">
+<%= flash[:notice] %>
+</div>
+<% end %>

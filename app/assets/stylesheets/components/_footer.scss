@@ -1,8 +1,10 @@
 .footer {
+  padding-block: 24px;
+  padding-inline: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  // height: 50px;
   padding: 0px 50px;
   color: $white;
   // border-top: 1px solid $gray;

@@ -4,4 +4,7 @@ class CustomRulesController < ApplicationController
 
   def show
   end
+  def index
+    @custom_rules = CustomRule.all
+  end
 end
