@@ -32,13 +32,16 @@
 .global-llm {
 width:100%;
 text-align: center;
-margin-top: 5px;
+margin-top: 15px;
+position: sticky;
+top: 65px;
+z-index: 1000;
 }
 .btn {
   color:$black;
   background-color: yellowgreen;
   opacity: 0.6;
-  border: 2px solid ;
+  border: 1px solid $black;
   border-radius: 15px;
 
   &:hover {

@@ -4,4 +4,28 @@
 
 .card {
   background-color: $green;
+  height:250px;
+
+  .img-game{
+    width: 100px;
+    Height:100px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+    }
+}
+.img-game:hover {
+  object-fit: fill;
+  object-position: bottom;
+}
+
+.game-card {
+  background: white;
+  border: 2px solid darkgreen;
+}
+
+.game-card-main {
+  width:90%;
+  margin: 25px auto;
+  flex-grow: 1;
 }
