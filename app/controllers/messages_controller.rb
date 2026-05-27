@@ -20,10 +20,11 @@ class MessagesController < ApplicationController
     @message.role = "user"
 
     if @message.save
-      ruby_llm_chat = RubyLLM.chat
-      response = ruby_llm_chat.with_instructions(instructions).ask(@message.content)
-      Message.create(role: "assistant", content: response.content, conversation: @conversation)
-      @conversation.generate_title_from_first_message # NEW
+      @ruby_llm_chat = RubyLLM.chat
+      build_conversation_history
+      response = @ruby_llm_chat.with_instructions(instructions).ask(@message.content)
+      @assistant_message = @conversation.messages.create(role: "assistant", content: response.content, conversation: @conversation)
+      @conversation.generate_title_from_first_message
       redirect_to conversation_path(@conversation)
     else
       render "conversation/show", status: :unprocessable_entity
@@ -37,10 +38,16 @@ class MessagesController < ApplicationController
   end
 
   def game_context
-  "Voici le jeux: #{@game.name}."
-end
+    "Voici le jeux: #{@game.name}."
+  end
 
-def instructions
-  [SYSTEM_PROMPT, game_context].compact.join("\n\n")
-end
+  def instructions
+    [SYSTEM_PROMPT, game_context].compact.join("\n\n")
+  end
+
+  def build_conversation_history
+    @conversation.messages.each do |message|
+      @ruby_llm_chat.add_message(message)
+    end
+  end
 end
