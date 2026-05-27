@@ -8,3 +8,21 @@
 <div>
     <%#= render "messages/new" %>
 </div>
+<div class="choice_games w-75 mx-auto">
+<%= simple_form_for [@conversation, @message] do |f| %>
+    <% @games.each do |game| %>
+      <%= f.submit game.name, class:'btn btn-primary' %>
+    <% end %>
+    <%= f.input :content, label: "Game name", required: true, placeholder:"Game name" %>
+    <%= f.button :submit, 'Ask LLM', class: 'btn btn-primary' %>
+  <% end %>
+<%= link_to "back", root_path %>
+</div>
+
+
+<!-- <div id="new_message_container"> -->
+  <%#= simple_form_for [@conversation, @message] do |f| %>
+    <%#= f.input :content, label: "Ask a question", required: true, placeholder: "How should I get started with the challenge?" %>
+    <%#= f.button :submit, 'Ask LLM', class: 'btn btn-primary' %>
+  <%# end %>
+<!-- </div> -->

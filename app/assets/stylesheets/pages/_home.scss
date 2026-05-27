@@ -1,4 +1,12 @@
 // Specific CSS for your home-page
 body {
-  background-color: $green;
+  background-color: $Blanc-casse;
+}
+
+h3 {
+  color: $purple;
+
+  em {
+    color:$blue;
+  }
 }

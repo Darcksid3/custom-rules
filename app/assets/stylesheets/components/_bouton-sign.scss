@@ -21,3 +21,17 @@
   background-color: #bb2d3b;
   border-color: #b02a37;
 }
+
+.bouton-card {
+  color: $sweetgrey;
+  background-color: $purple;
+  opacity:0.8;
+  border-radius: 25px;
+  padding: 10px 15px 10px 15px;
+  box-shadow: 2px 2px 15px $Moderngrey;
+  transition: opacity 0.2s;
+}
+
+.bouton-card:hover {
+  opacity:1;
+}

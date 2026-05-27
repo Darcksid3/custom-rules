@@ -27,6 +27,7 @@
   <div class="card-body">
     <h5 class="card-title fw-semibold text-uppercase"> <%= game.name %></h5>
     <p class="card-text">Nombre de joueurs :  <%= game.nb_players %></p>
-    <span class="fs-6"></span> <%= link_to "", game_path(game), class:"fa-solid fa-ellipsis", title:"View more : #{game.name}" %>
+    <%= link_to "Funny rules ? 🎭", conversations_path, data: { turbo_method: :post }, class:"bouton-card link-underline link-underline-opacity-0" %>
+  <svg class="card-meeple-watermark" viewBox="0 0 100 100"><path d="M50,15 C58,15 65,22 65,30 C65,38 58,45 50,45 C42,45 35,38 35,30 C35,22 42,15 50,15 Z M50,48 C65,48 82,53 88,65 C92,72 80,75 75,73 L82,100 L65,100 L50,85 L35,100 L18,100 L25,73 C20,75 8,72 12,65 C18,53 35,48 50,48 Z"/></svg>
   </div>
 </div>

@@ -14,7 +14,10 @@ class ConversationsController < ApplicationController
   end
 
   def show
+    @games = Game.all
     @conversation = Conversation.find(params[:id])
+    @message = Message.new
+
   end
 
 end

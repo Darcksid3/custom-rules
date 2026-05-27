@@ -5,11 +5,12 @@
   align-items: center;
   justify-content: space-between;
   // height: 50px;
-  padding: 0px 50px;
+  padding: 40px 20px;
+  margin-top: auto;
   color: $white;
   // border-top: 1px solid $gray;
-  background: $purple;
-  background: linear-gradient(0deg,$purple 80%, $green 100%);
+  background: $bg-footer; //$purple;
+  // background: linear-gradient(0deg,$purple 80%, $green 100%);
   margin-top: 15px;
   position: sticky;
   bottom: 0;
@@ -23,8 +24,8 @@
   align-items: center;
 
   a {
-  color: $gray;
-  opacity: 0.25;
+  color: $Moderngrey;
+  opacity: 0.85;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
@@ -34,7 +35,7 @@
   }
 }
 .footer-links a:hover {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 .footer .fa-heart {
   color: #D23333;
