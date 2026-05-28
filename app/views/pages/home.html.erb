@@ -1,13 +1,5 @@
 <%= render "shared/flashes_ok" %>
-
-<div class="global-llm">
-  <%= render  "shared/form" %>
-  <a class="btn w-50" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    🤖 AI CustomRules
-  </a>
-  <%= link_to "conversation", conversations_path, data: { turbo_method: :post } %>
-</div>
-
+<h3 class="mt-4 text-center">la seule application <strong>gratuite</strong> qui vous génère des <em>funny rules</em> de vos jeux préférés !</h3>
 <div class="game-card-main d-flex">
   <% @games.each do |game| %>
   <%= render "shared/card", game:game %>

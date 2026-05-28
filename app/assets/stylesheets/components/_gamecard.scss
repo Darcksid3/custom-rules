@@ -1,11 +1,27 @@
 .game-card {
   width:90%;
-  display:flexbox;
-  align-items: center;
-  justify-content: space-between;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15 px;
-  box-shadow: 2px 2px 15px darkgreen;
+  display:flexbox;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 15px $Moderngrey;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-meeple-watermark {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  opacity: 0.25;
+  fill:$Anthracite
 }

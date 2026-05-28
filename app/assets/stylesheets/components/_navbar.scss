@@ -2,9 +2,9 @@
   height: 72px;
   padding: 0 32px;
   justify-content: space-between;
-  color: $white;
-  background: #694D93;
-  background: linear-gradient(180deg,$purple 80%, $green 100%);
+  color: $sweetgrey;
+  background: $bg-footer;//#694D93;
+  //background: linear-gradient(180deg,$purple 80%, $green 100%);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -19,4 +19,8 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 50px;
+  box-shadow: 2px 2px 4px $white;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: center;
 }

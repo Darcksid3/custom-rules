@@ -13,5 +13,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @conversation = @game.conversations.where(user: current_user)
   end
+
 end
