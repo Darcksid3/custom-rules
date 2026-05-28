@@ -25,6 +25,11 @@
   object-position: center;
 }
 
+.custom-title {
+  margin-left: 136px;
+}
+
+
 
 .custom-title span:nth-child(1)  { color: #ff595e; }
 .custom-title span:nth-child(2)  { color: #ff924c; }
@@ -48,9 +53,16 @@
 /* SM ≥ 576px */
 @media (max-width: 576px) {
   .custom-title {
-    font-size: 20px !important;
+    font-size: 25px!important;
+    margin-left: 0px;
 
   }
+
+.navbar-toggler {
+  color: white;
+  background-color: #6a4c93;
+}
+
 }
 
   .dropdown-item {
@@ -72,7 +84,7 @@
 /* MD ≥ 768px */
 @media (max-width: 768px) {
   .custom-title {
-    font-size: 3rem;
+    font-size: 20px !important;
   }
 
   .navbar-nav {
@@ -85,13 +97,12 @@
 /* LG ≥ 992px */
 @media (max-width: 992px) {
   .custom-title {
-    font-size: 3.5rem;
-  }
+    font-size: 20px !important;
 }
-
+}
 /* XL ≥ 1200px */
 @media (max-width: 1200px) {
   .custom-title {
-    font-size: 4rem;
+    font-size: 20px !important;
   }
 }

@@ -10,3 +10,16 @@ h3 {
     color:$blue;
   }
 }
+
+.logo {
+  max-height: 300px;
+  margin-bottom: 50px;
+}
+
+
+
+@media (min-width: 1920px) {
+  .logo {
+    max-height: 100%;
+  }
+}
