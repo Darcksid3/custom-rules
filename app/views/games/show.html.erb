@@ -19,22 +19,13 @@
         </div>
       </div>
     </div>
-  
-    <div class="col-md-3">
-      <h2>conversation</h2>
-      <div class="mb-4">
-        <%# if @conversation.any? %>
-          <ul>
-            <%# @conversations.each do |conversation| %>
-              <li><%#= link_to conversation.title, conversation_path(chat) %></li>
-            <%# end %>
-          </ul>
-        <%# else %>
-          // // There are no conversation yet.
-        <%# end %>
-      </div>
+    <div class="col">
+      <h3>Mes conversation</h3>
+      <ul>
+        <% @game.conversations.each do |conversation| %>
+        <li><%= conversation.title %> <%= link_to "=>", conversation_path(conversation) %></li>
+        <% end %>
+      </ul>
     </div>
-
-    
   </div>
 </div>
