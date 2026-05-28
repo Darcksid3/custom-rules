@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
     @games = Game.all
     @user = current_user
-    @conversation = Conversation.find(19)
+    # @conversation = Conversation.find(19)
   end
 
 end
