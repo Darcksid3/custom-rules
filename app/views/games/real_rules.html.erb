@@ -1,14 +1,15 @@
-<div class="container my-5">
-  <%= link_to "← Retour aux jeux", root_path, class: "link-secondary" %>
+<!-- #Old code for separate view of the game rules. -->
+<!-- <div class="container my-5"> -->
+  <%#= link_to "← Retour aux jeux", root_path, class: "link-secondary" %>
 
-  <h1 class="mt-4"><%= @game.name %> - Real game rules</h1>
+  <!-- <h1 class="mt-4"><%#= @game.name %> - Real game rules</h1> -->
 
-  <% if @game.real_rules.present? %>
+  <%# if @game.real_rules.present? %>
     <%# Les règles sont écrites en Markdown dans la seed. %>
-    <div class="mt-4">
-      <%= raw(render_markdown(@game.real_rules)) %>
-    </div>
-  <% else %>
-    <p class="mt-4">Les règles de ce jeu ne sont pas encore disponibles.</p>
-  <% end %>
-</div>
+    <!-- <div class="mt-4"> -->
+      <%#= raw(render_markdown(@game.real_rules)) %>
+    <!-- </div> -->
+  <%# else %>
+    <!-- <p class="mt-4">Les règles de ce jeu ne sont pas encore disponibles.</p> -->
+  <%# end %>
+<!-- </div> -->

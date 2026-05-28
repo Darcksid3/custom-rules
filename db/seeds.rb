@@ -89,4 +89,80 @@ Game.create!(
   RULES
 )
 
+Game.create!(
+  name: "7 Wonders Duel",
+  nb_players: 2,
+  real_rules: <<~RULES
+    ## But du jeu
+
+    Développer la civilisation la plus puissante face à un seul adversaire.
+
+    ## Résumé des règles
+
+    - La partie se joue en trois âges.
+    - À chaque tour, un joueur choisit une carte disponible.
+    - Les cartes permettent de produire des ressources, construire des bâtiments ou gagner des points.
+    - La victoire peut arriver par domination militaire ou scientifique.
+    - Si aucune victoire immédiate n'arrive, les points sont comptés à la fin du troisième âge.
+    - Le joueur avec le meilleur score gagne la partie.
+  RULES
+)
+
+Game.create!(
+  name: "Dobble Anarchy Pancakes",
+  nb_players: 6,
+  real_rules: <<~RULES
+    ## But du jeu
+
+    Être le premier joueur à gagner deux manches en posant rapidement ses cartes pancakes.
+
+    ## Résumé des règles
+
+    - Chaque joueur reçoit des cartes pancakes.
+    - Au signal, tout le monde joue en même temps.
+    - Il faut repérer un ingrédient commun entre ses cartes et celles des autres joueurs.
+    - Quand un ingrédient commun est trouvé, le joueur pose sa carte sur la pile correspondante.
+    - La rapidité et l'observation sont essentielles.
+    - Le premier joueur à remporter deux manches gagne la partie.
+  RULES
+)
+
+Game.create!(
+  name: "Catan Duel",
+  nb_players: 2,
+  real_rules: <<~RULES
+    ## But du jeu
+
+    Développer sa principauté de Catan plus efficacement que son adversaire.
+
+    ## Résumé des règles
+
+    - Chaque joueur commence avec une petite principauté.
+    - Les dés produisent des ressources selon les cartes en jeu.
+    - Les ressources servent à construire des routes, colonies, villes et bâtiments.
+    - Les joueurs peuvent améliorer leur économie et renforcer leur stratégie.
+    - Certaines cartes apportent des avantages ou gênent l'adversaire.
+    - Le premier joueur à atteindre l'objectif de points remporte la partie.
+  RULES
+)
+
+Game.create!(
+  name: "Splendor",
+  nb_players: 4,
+  real_rules: <<~RULES
+    ## But du jeu
+
+    Devenir le marchand le plus prestigieux en achetant des cartes de développement.
+
+    ## Résumé des règles
+
+    - À son tour, un joueur prend des jetons, réserve une carte ou achète une carte.
+    - Les jetons servent à payer les cartes de développement.
+    - Les cartes achetées donnent des bonus permanents pour les prochains achats.
+    - Certaines cartes rapportent des points de prestige.
+    - Les nobles peuvent rejoindre un joueur qui possède les bons bonus.
+    - La partie se termine quand un joueur atteint le seuil de points requis.
+  RULES
+)
+
 puts "Finished!"

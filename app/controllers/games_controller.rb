@@ -15,9 +15,4 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @conversation = @game.conversations.where(user: current_user)
   end
-
-  def real_rules
-    @game = Game.find(params[:id])
-  end
-
 end
