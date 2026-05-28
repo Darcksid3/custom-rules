@@ -1,5 +1,5 @@
-<div class="container my-5 mx-auto col-6">
-<h2>Edit compte de <%= current_user.username %> <%#= resource_name.to_s.humanize %></h2>
+<div class="container-sign my-5 mx-auto col-6">
+<h2 class="h2-sign">Edit compte de <%= current_user.username %> <%#= resource_name.to_s.humanize %></h2>
 
 <%= render "shared/flashes_ko" %>
 
@@ -27,13 +27,10 @@
   </div>
 
   <div class="form-actions">
-    <%= f.submit "Update", class:"bouton-sign" %>
+    <%= f.submit "Update", class:"bouton-sign me-5" %>
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class:"bouton-delete" %>
   </div>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class:"bouton-sign" %></div>
 
 <%= link_to "Back", :back %>
 </div>
