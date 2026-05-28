@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   # GET /games
   # GET /games/:id
   resources :games, only: [:index, :show] do
+    # Page avec les vraies règles du jeu.
+    get :real_rules, on: :member
+
     resources :conversations, only: [:new, :create]
   end
   #resources :conversations, only: [:create]

@@ -12,6 +12,13 @@
 
 }
 
+.game-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
 .game-card:hover {
   transform: translateY(-5px);
 }
