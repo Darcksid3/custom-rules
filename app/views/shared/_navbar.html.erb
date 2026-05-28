@@ -39,11 +39,11 @@
             <div class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="navbarDropdown">
               <%= link_to "🏠 Home", root_path, class: "dropdown-item" %>
               <% if user_signed_in? %>
-              <a class="dropdown-item" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">🤖 AI CustomRules</a>
-            <% end %>
               <%= link_to "📜 My Custom-Rules", custom_rules_path, class: "dropdown-item" %>
               <%= link_to "🙂 Mon compte", profile_path, class: "dropdown-item" %>
               <%= link_to "🔓 Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+              <!-- <a class="dropdown-item" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">🤖 AI CustomRules</a> -->
+            <% end %>
             </div>
           </li>
         <%# else %>

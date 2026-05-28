@@ -7,6 +7,9 @@
   <%= render "messages/messages", messages: @conversation.messages %>
 </div>
 
-<div id="new_message_container">
-  <%= render "messages/form", conversation: @conversation, message: @message %>
+<div id="new_message_container" data-controller="stopbutton">
+  <%= simple_form_for [@conversation, @message] do |f| %>
+    <%= f.input :content, label: "Ask a question", required: true, placeholder: "crée un nouvelle règle?" , input_html: { class:"input_ask", data: {action: "keyup->stopbutton#call", stopbutton_target: "input"}} %>
+    <%= f.button :submit, 'Demander au bot', class: 'bouton-sign disabled', data: { stopbutton_target: "button" } %>
+  <% end %>
 </div>
