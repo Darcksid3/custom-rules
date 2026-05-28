@@ -1,12 +1,12 @@
-.bouton-sign {
+.bouton-delete {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   padding: 8px 21px;
-  min-width: 140px;
+  min-width: 100px;
 
-  background-color: #FF9B51;
+  background-color: $red;
   color: white;
 
   border: 1px solid #BFC9D1;
@@ -22,9 +22,9 @@
 
   background-image: linear-gradient(
     to bottom,
-    lighten(#FF9B51, 8%) 0%,
-    #FF9B51 45%,
-    darken(#FF9B51, 6%) 100%
+    lighten($red, 8%) 0%,
+    $red 45%,
+    darken($red, 6%) 100%
   );
 
   box-shadow:
@@ -36,12 +36,12 @@
   transition: all 0.25s ease;
 
   &:hover {
-    background-color: darken(#FF9B51, 10%);
+    background-color: darken($red, 10%);
 
     background-image: linear-gradient(
       to bottom,
-      lighten(#FF9B51, 2%) 0%,
-      darken(#FF9B51, 4%) 100%
+      lighten($red, 2%) 0%,
+      darken($red, 4%) 100%
     );
 
     transform: translateY(-1px);
@@ -60,18 +60,4 @@
       inset 0 1px 3px rgba(0, 0, 0, 0.2),
       0 1px 2px rgba(0, 0, 0, 0.2);
   }
-}
-
-.bouton-card {
-  color: $sweetgrey;
-  background-color: $purple;
-  opacity:0.8;
-  border-radius: 25px;
-  padding: 10px 15px 10px 15px;
-  box-shadow: 2px 2px 15px $Moderngrey;
-  transition: opacity 0.2s;
-}
-
-.bouton-card:hover {
-  opacity:1;
 }

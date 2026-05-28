@@ -1,5 +1,5 @@
-<div class="container my-5">
-  <h2>Log in</h2>
+<div class="container-sign my-5">
+  <h2 class="h2-sign">Log in</h2>
   <%= render "shared/flashes_ko" %>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -13,7 +13,6 @@
     <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
     <div class="form-actions">
