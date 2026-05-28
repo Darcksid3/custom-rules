@@ -21,9 +21,8 @@
 
 .game-card {
   background: $white;
-  border: 1px solid $Moderngrey;
-  min-height: 360px;
-  height: auto;
+  border: 5px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .game-card-main {
