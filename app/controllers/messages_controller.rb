@@ -1,13 +1,8 @@
 class MessagesController < ApplicationController
 
-<<<<<<< HEAD
-  SYSTEM_PROMPT = ""
-
-=======
   SYSTEM_PROMPT = "Tu est un expert en comception de règle de jeux de société.\n\n
                    ton but est d'aider l'utilisateur à crée des règles de jeux personalisez.\n\n
                    en fonction de ces instructions. répond toujours en Markdown."
->>>>>>> test_conversation
   def show
     # on affiche tout les mesaage de la conversation
   end
