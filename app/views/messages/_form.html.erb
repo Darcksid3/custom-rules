@@ -1,4 +1,5 @@
-<%= link_to "Sauvegarder ma règle", custom_rules_path, data: { turbo_method: :post }%>
+<%= link_to "Sauvegarder ma règle", custom_rules_path( conversation: conversation, message: message ), data: { turbo_method: :post } %>
+<%#= button_to "Sauvegarder ma règle", custom_rules_path, params: { conversation: conversation, message: message } %>
 
 <%= simple_form_for [conversation, message] do |f| %>
     <%= f.input :content, label: "Posez votre question!", required: true, placeholder: "crée un nouvelle règle?" %>

@@ -1,20 +1,16 @@
 class CustomRulesController < ApplicationController
   def create
-    message = Message.find(params[:message_id])
+    @conversation = Conversation.find(params[:conversation])
     
-    CustomRules.create(
-      content: message.content,
-      conversation: message.conversation,
-      game: message.conversation.game,
-      name: message.conversation.title,
-      theme: "theme",
-    )
-    # @custom_rules = CustomRule.new(game_id: @game, conversation_id: @conversation, content: @conversation.last_assistant_message.content, name: @conversation.title, theme: "theme")
+    @custom_rules = CustomRule.new(game_id: @conversation.game_id, conversation_id: @conversation.id, content: @conversation.messages.last.content, name: @conversation.title, theme: "theme")
     
     if @custom_rules.save
-      "yess"
+      @test = "ok"
+      # redirect to profile
+      redirect_to profile_path(current_user)
     else
-      "et mer2"
+      @test = "et mer2"
+      render "/games/:id"(@conversation.game_id)
     end
     raise
   end
