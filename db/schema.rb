@@ -32,8 +32,10 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_28_123000) do
     t.string "name"
     t.string "theme"
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
     t.index ["conversation_id"], name: "index_custom_rules_on_conversation_id"
     t.index ["game_id"], name: "index_custom_rules_on_game_id"
+    t.index ["user_id"], name: "index_custom_rules_on_user_id"
   end
 
   create_table "games", force: :cascade do |t|
@@ -213,6 +215,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_28_123000) do
   add_foreign_key "conversations", "users"
   add_foreign_key "custom_rules", "conversations"
   add_foreign_key "custom_rules", "games"
+  add_foreign_key "custom_rules", "users"
   add_foreign_key "messages", "conversations"
   add_foreign_key "solid_queue_blocked_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_claimed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
