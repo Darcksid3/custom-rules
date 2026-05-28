@@ -19,8 +19,79 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 50px;
-  box-shadow: 2px 2px 4px $white;
-  border-radius: 4px;
+  // box-shadow: 2px 2px 4px $white;
+  // border-radius: 4px;
   object-fit: cover;
   object-position: center;
+}
+
+
+.custom-title span:nth-child(1)  { color: #ff595e; }
+.custom-title span:nth-child(2)  { color: #ff924c; }
+.custom-title span:nth-child(3)  { color: #ffca3a; }
+.custom-title span:nth-child(4)  { color: #8ac926; }
+.custom-title span:nth-child(5)  { color: #52b788; }
+.custom-title span:nth-child(6)  { color: #1982c4; }
+.custom-title span:nth-child(8)  { color: #6a4c93; }
+.custom-title span:nth-child(9)  { color: #f72585; }
+.custom-title span:nth-child(10) { color: #7209b7; }
+.custom-title span:nth-child(11) { color: #3a86ff; }
+.custom-title span:nth-child(12) { color: #43aa8b; }
+
+.custom-title {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* SM ≥ 576px */
+@media (max-width: 576px) {
+  .custom-title {
+    font-size: 20px !important;
+
+  }
+}
+
+  .dropdown-item {
+    color: white ;
+  }
+
+  .dropdown-menu {
+ background-color: $bg-footer;
+ color: white ;
+ border-radius: 25px !important;
+}
+
+#navbarDropdown {
+  background-color: $bg-footer !important;
+
+}
+
+
+/* MD ≥ 768px */
+@media (max-width: 768px) {
+  .custom-title {
+    font-size: 3rem;
+  }
+
+  .navbar-nav {
+    background-color: $bg-footer;
+    border-radius: 0 0 25px 25px;
+  }
+
+}
+
+/* LG ≥ 992px */
+@media (max-width: 992px) {
+  .custom-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* XL ≥ 1200px */
+@media (max-width: 1200px) {
+  .custom-title {
+    font-size: 4rem;
+  }
 }

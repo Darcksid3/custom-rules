@@ -30,12 +30,15 @@
   font-size: 24px;
   padding: 0px 10px;
   }
+
+
   span {
     font-size:0.85em;
   }
 }
 .footer-links a:hover {
-  opacity: 0.9;
+  opacity: 0;
+
 }
 .footer .fa-heart {
   color: #D23333;
