@@ -47,6 +47,9 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 # To Use LLM
 gem "ruby_llm", "~> 1.2.0"
+gem "kramdown"
+gem "rouge"
+gem "kramdown-parser-gfm"
 
 group :development, :test do
   gem "dotenv-rails"

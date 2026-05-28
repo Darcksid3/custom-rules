@@ -3,21 +3,22 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @conversation = Conversation.new(title: "default")
+    @game = Game.find(params[:game_id])
+    @conversation = Conversation.new(title: Conversation::DEFAULT_TITLE)
+    @conversation.game = @game
     @conversation.user = current_user
     if @conversation.save
-      @conversation.messages.create(role: "assistant", content: "Pour quel jeux souhaitez-vous des règles custom ?")
+      @conversation.messages.create(role: "assistant", content: "Parfait jouons à #{@game.name}")
       redirect_to conversation_path(@conversation)
     else
-      render "pages/home"
+      @conversation = @game.conversation.where(user: current_user)
+      render "game/show"
     end
   end
 
   def show
-    @games = Game.all
-    @conversation = Conversation.find(params[:id])
+    @conversation = current_user.conversations.find(params[:id])
     @message = Message.new
-
   end
 
 end

@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   # GET /games
   # GET /games/:id
   resources :games, only: [:index, :show] do
-    resources :conversations, only: [:new]
+    resources :conversations, only: [:new, :create]
   end
-  resources :conversations, only: [:create]
+  #resources :conversations, only: [:create]
 
   resources :conversations, only: [:show] do
     resources :messages, only: [:create]
