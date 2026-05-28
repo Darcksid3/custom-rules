@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <h2>Profil</h2>
+            <p class="mb-1"><strong>Username :</strong> <%= @user.username %> </p>
+            <p class="mb-0"><strong>Email :</strong> <%= @user.email %></p>
+            <%= link_to "🙂 Mon compte", edit_user_registration_path %>
+
+        </div>
+        <div class="col">
+            <h3>Mes conversations</h3>
+            <ul>
+                <% @user.conversations.each do |conversation| %>
+                <li><%= conversation.title %> <%= link_to "=>", conversation_path(conversation) %></li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>

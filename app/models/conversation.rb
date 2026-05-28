@@ -19,4 +19,8 @@ class Conversation < ApplicationRecord
     response = RubyLLM.chat.with_instructions(TITLE_PROMPT).ask(first_user_message.content)
     update(title: response.content)
   end
+
+  def last_assistant_message
+    messages.where(role: "assistant").last
+  end
 end
