@@ -2,6 +2,6 @@
 <%#= button_to "Sauvegarder ma règle", custom_rules_path, params: { conversation: conversation, message: message } %>
 
 <%= simple_form_for [conversation, message] do |f| %>
-    <%= f.input :content, label: "Posez votre question!", required: true, placeholder: "crée un nouvelle règle?" %>
-    <%= f.button :submit, 'Demander au bot', class: 'btn btn-primary' %>
+  <%= f.input :content, label: "Ask a question", required: true, placeholder: "crée un nouvelle règle?" , input_html: { class:"input_ask", data: {action: "keyup->stopbutton#call", stopbutton_target: "input"}} %>
+  <%= f.button :submit, 'Demander au bot', class: 'bouton-sign disabled', data: { stopbutton_target: "button" } %>
 <% end %>
