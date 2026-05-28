@@ -63,6 +63,10 @@
 }
 
 .bouton-card {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 165px;
   color: $sweetgrey;
   background-color: $purple;
   opacity:0.8;

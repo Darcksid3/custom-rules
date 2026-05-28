@@ -22,6 +22,8 @@
 .game-card {
   background: $white;
   border: 1px solid $Moderngrey;
+  min-height: 360px;
+  height: auto;
 }
 
 .game-card-main {
