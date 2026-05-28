@@ -22,12 +22,29 @@
 <%= image_tag("https://www.pixiegames.fr/989-product_zoom/uno.jpg", width: "45%", class:"img-game pt-2") %>
 <% when "Scrabble" %>
 <%= image_tag("https://cdn.cultura.com/cdn-cgi/image/width=1280/media/pim/77_241905_1_10_FR.jpg", width: "45%", class:"img-game pt-2") %>
+<% when "7 Wonders Duel" %>
+<%= image_tag("https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/9a83031b0e2cde5f643c6f359ec68e0e6dc045da_06024252.jpeg", width: "45%", class:"img-game pt-2") %>
+<% when "Dobble Anarchy Pancakes" %>
+<%= image_tag("https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/6184f9286500b24c1dd3eca416f2a280e57d7fdd_41151433_02.jpeg", width: "45%", class:"img-game pt-2") %>
+<% when "Catan Duel" %>
+<%= image_tag("https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/38070c417b6d6312968121153535e3c88d96155f_06027542.jpeg", width: "45%", class:"img-game pt-2") %>
+<% when "Splendor" %>
+<%= image_tag("https://joueclub-joueclub-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/c6559d12ec8729ac0a79820be58f6c29cddb2fa1_06024261_03.jpeg", width: "45%", class:"img-game pt-2") %>
   <!-- <img src="..." class="card-img-top" alt="..."> -->
   <% end %>
   <div class="card-body">
     <h5 class="card-title fw-semibold text-uppercase text-center"> <%= game.name %></h5>
     <p class="card-text">Nombre de joueurs :  <%= game.nb_players %></p>
-    <%= link_to "Funny rules ? 🎭", game_conversations_path(game), data: { turbo_method: :post }, class:"bouton-card link-underline link-underline-opacity-0" %>
+    <div class="game-card-actions">
+      <%# Crée une nouvelle conversation IA pour générer des règles fun. %>
+      <%= link_to "Funny rules ? 🎭", game_conversations_path(game), data: { turbo_method: :post }, class:"bouton-card link-underline link-underline-opacity-0" %>
+
+      <%# Affiche la page des règles IA déjà sauvegardées. %>
+      <%= link_to "My custom rules", custom_rules_path, class:"bouton-card link-underline link-underline-opacity-0" %>
+
+      <%# Affiche les règles réelles stockées dans la table games. %>
+      <%= link_to "Real game rules", game_path(game), class:"bouton-card link-underline link-underline-opacity-0" %>
+    </div>
   <svg class="card-meeple-watermark" viewBox="0 0 100 100"><path d="M50,15 C58,15 65,22 65,30 C65,38 58,45 50,45 C42,45 35,38 35,30 C35,22 42,15 50,15 Z M50,48 C65,48 82,53 88,65 C92,72 80,75 75,73 L82,100 L65,100 L50,85 L35,100 L18,100 L25,73 C20,75 8,72 12,65 C18,53 35,48 50,48 Z"/></svg>
   </div>
 </div>

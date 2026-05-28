@@ -1,18 +1,18 @@
 <!-- path: <p>Find me in app/views/games/show.html.erb</p> -->
 <div class="container" style="background-color:white;">
   <div class="row">
-    
+
     <div class="col">
       <h1 class="mt-5"><%= @game.name %></h1>
         <div class="col">
-        
+
         <p>
           Nombre de joueurs:
           <%= @game.nb_players %>
         </p>
         <div>
           <p>
-            Créez tes règles personalisé grace à notre agent 
+            Créez tes règles personalisé grace à notre agent
             > <%#= link_to "Rules Bot", game_conversations_path(@game), data: { turbo_method: :post } %>
             <%= button_to "New chat", game_conversations_path(@game), class: "btn btn-primary" %>
           </p>
@@ -26,6 +26,24 @@
         <li><%= conversation.title %> <%= link_to "=>", conversation_path(conversation) %></li>
         <% end %>
       </ul>
+    </div>
+  </div>
+
+  <div class="row" >
+    <div class="container my-5">
+      <!-- Inserer la carte finale dans la DIV CONTAINER -->
+      <%= link_to "← Retour aux jeux", root_path, class: "link-secondary" %>
+
+      <h1 class="mt-4"><%= @game.name %> - Real game rules</h1>
+
+      <% if @game.real_rules.present? %>
+        <%# Les règles sont écrites en Markdown dans la seed. %>
+        <div class="mt-4">
+          <%= raw(render_markdown(@game.real_rules)) %>
+        </div>
+      <% else %>
+        <p class="mt-4">Les règles de ce jeu ne sont pas encore disponibles.</p>
+      <% end %>
     </div>
   </div>
 </div>

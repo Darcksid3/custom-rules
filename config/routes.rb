@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :custom_rules, only: [:create, :show, :index]
-  
+
 
   devise_for :users
   root to: "pages#home"
