@@ -1,5 +1,7 @@
 
 
+
+<%= link_to game_custom_rule_path(c.game, c), class: "link-card" do %>
 <div class="card game-card h-100">
 
   <h5 class="card-title w-100 text-center pt-1"><%= c.game.name %></h5>
@@ -12,3 +14,4 @@
       </div>
   </div>
 </div>
+<% end %>

@@ -1,2 +1,17 @@
-<h1>CustomRules#show</h1>
-<p>Find me in app/views/custom_rules/show.html.erb</p>
+<h2 class="h2-sign mt-2"><%= @custom_rule.name %></h2>
+
+<p><%= @custom_rule.content_html %></p>
+
+
+
+
+<%# create_table "custom_rules", force: :cascade do |t|
+    t.text "content"
+    t.bigint "conversation_id", null: false
+    t.datetime "created_at", null: false
+    t.bigint "game_id", null: false
+    t.string "name"
+    t.datetime "updated_at", null: false
+    t.index ["conversation_id"], name: "index_custom_rules_on_conversation_id"
+    t.index ["game_id"], name: "index_custom_rules_on_game_id"
+  end %>

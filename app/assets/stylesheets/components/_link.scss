@@ -7,3 +7,10 @@
   text-decoration: none;
   color: black;
 }
+
+.link-card {
+  text-decoration: none;
+  &:hover {
+    color: $purple;
+  }
+}
