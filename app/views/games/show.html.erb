@@ -39,7 +39,7 @@
           <% if @custom_rules.any? %>
           <ol>
               <% @custom_rules.each do |custom_rule| %>
-                  <li><%= link_to custom_rule.name, game_custom_rule_path(@game, custom_rule), class:"link-card" %></li>
+                  <li><%= link_to custom_rule.name, game_custom_rule_path(@game, custom_rule), class:"link-card-profile " %></li>
               <% end %>
           </ol>
           <% else %>
