@@ -10,4 +10,7 @@
 
 .link-card {
   text-decoration: none;
+  &:hover {
+    color: $purple;
+  }
 }

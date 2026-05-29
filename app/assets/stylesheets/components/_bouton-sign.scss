@@ -5,8 +5,9 @@
 
   padding: 8px 21px;
   min-width: 140px;
+  margin-bottom: 5px;
 
-  background-color: #FF9B51;
+  background-color: $purple;
   color: white;
 
   border: 1px solid #BFC9D1;
@@ -22,9 +23,9 @@
 
   background-image: linear-gradient(
     to bottom,
-    lighten(#FF9B51, 8%) 0%,
-    #FF9B51 45%,
-    darken(#FF9B51, 6%) 100%
+    lighten($purple, 8%) 0%,
+    $purple 45%,
+    darken($purple, 6%) 100%
   );
 
   box-shadow:
@@ -36,12 +37,13 @@
   transition: all 0.25s ease;
 
   &:hover {
-    background-color: darken(#FF9B51, 10%);
+    background-color: darken( $purple, 10%);
+    color: lightgray;
 
     background-image: linear-gradient(
       to bottom,
-      lighten(#FF9B51, 2%) 0%,
-      darken(#FF9B51, 4%) 100%
+      lighten($purple, 2%) 0%,
+      darken($purple, 4%) 100%
     );
 
     transform: translateY(-1px);
