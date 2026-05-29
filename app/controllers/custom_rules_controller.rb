@@ -18,5 +18,6 @@ class CustomRulesController < ApplicationController
   end
   def index
     @custom_rules = CustomRule.all
+
   end
 end
