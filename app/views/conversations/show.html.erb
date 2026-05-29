@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<div>
-  <%= link_to "← #{@conversation.game.name}", game_path(@conversation.game), class: "bouton-sign mt-2" %>
-=======
-<h1>Créer votre règle</h1>
-<%= link_to "← #{@conversation.game.name}", game_path(@conversation.game) %>
->>>>>>> origin
+<h1 class="h2-sign mt-2">Crée tes funny rules !</h1>
 
-  <h1 class="h2-sign" id="titre"><%= @conversation.title %></h1>
+  <h3 id="titre" class="mt-2 ms-3"><%= @conversation.title %></h3>
 
   <div id="messages">
     <%= render "messages/messages", messages: @conversation.messages %>
@@ -19,4 +13,5 @@
       <%#= f.button :submit, 'Demander au bot', class: 'bouton-sign disabled', data: { stopbutton_target: "button" } %>
     <%# end %>
   </div>
+  <%= link_to "← Go back to #{@conversation.game.name}", game_path(@conversation.game), class: "bouton-sign mt-5" %>
 </div>
