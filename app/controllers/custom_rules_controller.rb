@@ -7,7 +7,7 @@ class CustomRulesController < ApplicationController
     if @custom_rules.save
       @test = "ok"
       # redirect to profile
-      redirect_to custom_rules_path(current_user)
+      redirect_to custom_rules_path
     else
       @test = "et mer2"
       redirect_to conversations_path(@conversation)
@@ -18,5 +18,6 @@ class CustomRulesController < ApplicationController
   end
   def index
     @custom_rules = CustomRule.all
+
   end
 end
