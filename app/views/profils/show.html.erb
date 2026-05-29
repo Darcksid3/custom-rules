@@ -1,19 +1,20 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
-            <h2>Profil</h2>
+        <div class="col-12 col-md-8 rounded-4 bg-white m-2">
+            <h2 class="h2-sign">Profil</h2>
             <p class="mb-1"><strong>Username :</strong> <%= @user.username %> </p>
             <p class="mb-0"><strong>Email :</strong> <%= @user.email %></p>
-            <%= link_to "🙂 Mon compte", edit_user_registration_path %>
+            <%= link_to "🙂 Mon compte", edit_user_registration_path, class: "bouton-sign mt-3" %>
 
         </div>
-        <div class="col">
-            <h3>Mes conversations</h3>
-            <ul>
+        <div class="col rounded-4 bg-white m-2">
+            <h3 class="h2-sign">Mes conversations</h3>
+            <ol>
                 <% @user.conversations.each do |conversation| %>
-                <li><%= conversation.title %> <%= link_to "=>", conversation_path(conversation) %></li>
+                <li><%= link_to conversation.title, conversation_path(conversation), class:"link-card" %></li>
                 <% end %>
-            </ul>
+            </ol>
+
         </div>
     </div>
 </div>
