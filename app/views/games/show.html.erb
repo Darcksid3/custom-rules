@@ -1,49 +1,55 @@
 <!-- path: <p>Find me in app/views/games/show.html.erb</p> -->
-<div class="container" style="background-color:white;">
-  <div class="row">
+<div class="container my-5">
+  <div class="row g-4">
+    <div class="col-12 col-lg-7">
+      <div class="card game-show-card">
+        <div class="card-body">
+          <h1 class="h2-sign"><%= @game.name %></h1>
+          <p>Nombre de joueurs: <%= @game.nb_players %></p>
 
-    <div class="col">
-      <h1 class="mt-5"><%= @game.name %></h1>
-        <div class="col">
+          <p>Créez tes règles personnalisé grace à notre agent 🤖 ></p>
 
-        <p>
-          Nombre de joueurs:
-          <%= @game.nb_players %>
-        </p>
-        <div>
-          <p>
-            Créez tes règles personalisé grace à notre agent 🤖
-            > <%#= link_to "Rules Bot", game_conversations_path(@game), data: { turbo_method: :post } %>
-            <%= button_to "New chat", game_conversations_path(@game), class: "btn btn-primary" %>
-          </p>
+          <div class="game-show-action-box">
+            <%= button_to "New chat", game_conversations_path(@game), class: "bouton-sign border-0" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="card game-show-card game-show-real-rules mt-4">
+
+        <div class="card-body">
+          <%= link_to "← Retour aux jeux", root_path, class: "bouton-sign" %>
+          <h2 class="mt-4 h2-sign"> Real game rules</h2>
+
+          <% if @game.real_rules.present? %>
+            <%# Les règles viennent de la colonne real_rules dans la table games. %>
+            <%= raw(render_markdown(@game.real_rules)) %>
+          <% else %>
+            <p>Les règles de ce jeu ne sont pas encore disponibles.</p>
+          <% end %>
         </div>
       </div>
     </div>
-    <div class="col">
-      <h3>Mes conversations</h3>
-      <ul>
-        <% @game.conversations.each do |conversation| %>
-        <li><%= conversation.title %> <%= link_to "=>", conversation_path(conversation) %></li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
 
-  <div class="row" >
-    <div class="container my-5">
-      <!-- Inserer la carte finale dans la DIV CONTAINER -->
-      <%= link_to "← Retour aux jeux", root_path, class: "link-secondary" %>
+    <div class="col-12 col-lg-5">
+      <div class="card game-show-card game-show-custom-rules h-100">
+        <div class="card-body">
+          <h2 class="h2-sign">Custom rules</h2>
 
-      <h1 class="mt-4"><%= @game.name %> - Real game rules</h1>
-
-      <% if @game.real_rules.present? %>
-        <%# Les règles sont écrites en Markdown dans la seed. %>
-        <div class="mt-4">
-          <%= raw(render_markdown(@game.real_rules)) %>
+          <% if @conversations.any? %>
+            <ul class="custom-rules-list">
+              <% @conversations.each do |conversation| %>
+                <li>
+                  <%= conversation.title %>
+                  <%= link_to "=>", conversation_path(conversation), class: "link-secondary" %>
+                </li>
+              <% end %>
+            </ul>
+          <% else %>
+            <p>Vous n'avez pas encore créé de règles personnalisées pour ce jeu.</p>
+          <% end %>
         </div>
-      <% else %>
-        <p class="mt-4">Les règles de ce jeu ne sont pas encore disponibles.</p>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>
