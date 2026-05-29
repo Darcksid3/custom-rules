@@ -7,11 +7,11 @@
           <h1 class="h2-sign"><%= @game.name %></h1>
           <p>Nombre de joueurs: <%= @game.nb_players %></p>
 
-          <p>Créez tes règles personnalisé grace à notre agent 🤖 ></p>
+          <p>Créez tes règles personnalisé grace à notre agent 🤖 </p>
 
-          <div class="game-show-action-box">
-            <%= button_to "New chat", game_conversations_path(@game), class: "bouton-sign border-0" %>
-          </div>
+
+          <%= link_to "New chat", game_conversations_path(@game), class: "bouton-sign border-0" %>
+
         </div>
       </div>
 
@@ -36,12 +36,12 @@
         <div class="card-body">
           <h2 class="h2-sign">Custom rules</h2>
 
-          <% if @conversations.any? %>
+          <% if @custom_rules.any? %>
             <ul class="custom-rules-list">
-              <% @conversations.each do |conversation| %>
+              <% @custom_rules.each do |custom_rule| %>
                 <li>
-                  <%= conversation.title %>
-                  <%= link_to "=>", conversation_path(conversation), class: "link-secondary" %>
+                  <%= link_to custom_rule.name, game_custom_rule_path(@game, custom_rule), class:"link-card" %>
+
                 </li>
               <% end %>
             </ul>
