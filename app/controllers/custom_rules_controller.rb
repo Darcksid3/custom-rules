@@ -21,5 +21,6 @@ class CustomRulesController < ApplicationController
 
   def index
     @custom_rules = CustomRule.all
+    
   end
 end
