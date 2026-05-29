@@ -1,7 +1,7 @@
 <%= turbo_stream_from @conversation %>
 
 
-<%= link_to "← #{@conversation.game.name}", game_path(@conversation.game) %>
+<%= link_to "← Retour", game_path(@conversation.game), class: "bouton-sign mt-2" %>
 
   <h3 id="titre" class="mt-2 ms-3"><%= @conversation.title %></h3>
 
