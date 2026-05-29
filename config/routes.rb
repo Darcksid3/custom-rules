@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :conversations, only: [:show] do
     resources :messages, only: [:create]
+    resources :custom_rules, only: [:show]
+
   end
 
   resources :custom_rules, only: [:create, :index]

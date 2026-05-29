@@ -1,6 +1,6 @@
 <%= turbo_stream_from @conversation %>
 
-<h1>Conversations#show</h1>
+
 <%= link_to "← #{@conversation.game.name}", game_path(@conversation.game) %>
 
   <h3 id="titre" class="mt-2 ms-3"><%= @conversation.title %></h3>

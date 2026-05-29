@@ -10,7 +10,7 @@
           <p>Créez tes règles personnalisé grace à notre agent 🤖 </p>
 
 
-          <%= link_to "New chat", game_conversations_path(@game), class: "bouton-sign border-0" %>
+          <%= link_to "New chat", game_conversations_path(@game), data: {turbo_method: :post}, class: "bouton-sign border-0" %>
 
         </div>
       </div>
