@@ -18,6 +18,9 @@ class CustomRulesController < ApplicationController
   end
   def index
     @custom_rules = CustomRule.all
-
+    
+    # respond_to do |format|
+    # format.md { render markdown: @custom_rules }
+    # format.html
   end
 end

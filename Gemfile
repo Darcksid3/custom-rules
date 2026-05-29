@@ -50,6 +50,7 @@ gem "ruby_llm", "~> 1.2.0"
 gem "kramdown"
 gem "rouge"
 gem "kramdown-parser-gfm"
+gem "commonmarker"
 
 group :development, :test do
   gem "dotenv-rails"

@@ -1,8 +1,10 @@
-<h1>CustomRules#Index</h1>
-<p>Find me in app/views/custom_rules/index.html.erb</p>
+<h1 class="titre-index_cr">Les Funny Rules de <%= current_user.username %></h1>
+<p class="sous-titre-index-cr">Toutes les <span>Funny Rules</span> que tu as généré !</p>
 
-<div class="game-card-main d-flex">
+<div class="game-card-main row g-4">
   <% @custom_rules.each do |c| %>
-  <%= render "shared/custom_rules_card", c: c %>
+  <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+    <%= render "shared/custom_rules_card", c: c %>
+  </div>
   <% end %>
 </div>
