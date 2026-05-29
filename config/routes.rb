@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # GET /games/:id
   resources :games, only: [:index, :show] do
     resources :conversations, only: [:new, :create]
+    resources :conversations, only: [:show]
   end
   #resources :conversations, only: [:create]
 
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   get "profile", to: "profils#show", as: :profile
-  
+
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
