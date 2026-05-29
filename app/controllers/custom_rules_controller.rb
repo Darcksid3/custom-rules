@@ -7,10 +7,10 @@ class CustomRulesController < ApplicationController
     if @custom_rules.save
       @test = "ok"
       # redirect to profile
-      redirect_to profile_path(current_user)
+      redirect_to custom_rules_path(current_user)
     else
       @test = "et mer2"
-      # render "/games/:id"(@conversation.game_id)
+      redirect_to conversations_path(@conversation)
     end
   end
 
