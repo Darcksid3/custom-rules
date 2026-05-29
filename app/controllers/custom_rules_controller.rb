@@ -2,7 +2,7 @@ class CustomRulesController < ApplicationController
   def create
     @conversation = Conversation.find(params[:conversation])
 
-    @custom_rules = CustomRule.new(game_id: @conversation.game_id, conversation_id: @conversation.id, content: @conversation.messages.last.content, name: @conversation.title, theme: "theme")
+    @custom_rules = CustomRule.new(game_id: @conversation.game_id, conversation_id: @conversation.id, content: @conversation.messages.last.content, name: @conversation.title)
 
     if @custom_rules.save
       @test = "ok"
