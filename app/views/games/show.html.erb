@@ -10,13 +10,9 @@
           Nombre de joueurs:
           <%= @game.nb_players %>
         </p>
-        <div>
-          <p>
-            Créez tes règles personalisé grace à notre agent 🤖
-            > <%#= link_to "Rules Bot", game_conversations_path(@game), data: { turbo_method: :post } %>
-            <%= button_to "New chat", game_conversations_path(@game), class: "btn btn-primary" %>
-          </p>
-        </div>
+
+      <%= button_to "New chat", game_conversations_path(@game), class: "bouton-sign" %>
+
       </div>
     </div>
     <div class="col">
