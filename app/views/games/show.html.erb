@@ -37,14 +37,11 @@
           <h2 class="h2-sign">Custom rules</h2>
 
           <% if @custom_rules.any? %>
-            <ul class="custom-rules-list">
+          <ol>
               <% @custom_rules.each do |custom_rule| %>
-                <li>
-                  <%= link_to custom_rule.name, game_custom_rule_path(@game, custom_rule), class:"link-card" %>
-
-                </li>
+                  <li><%= link_to custom_rule.name, game_custom_rule_path(@game, custom_rule), class:"link-card" %></li>
               <% end %>
-            </ul>
+          </ol>
           <% else %>
             <p>Vous n'avez pas encore créé de règles personnalisées pour ce jeu.</p>
           <% end %>

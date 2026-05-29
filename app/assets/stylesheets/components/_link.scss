@@ -9,8 +9,9 @@
 }
 
 .link-card {
-  text-decoration: none;
+  background-color: transparent;
+  color: $purple;
   &:hover {
-    color: $purple;
+    color: $green;
   }
 }
