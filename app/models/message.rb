@@ -1,15 +1,10 @@
 class Message < ApplicationRecord
+  after_create_commit :broadcast_append_to_conversation
+  
   belongs_to :conversation
-
-  MAX_USER_MESSAGES = 10
-
-  validate :user_message_limit, if: -> { role == "user" }
-
   private
 
-  def user_message_limit
-    if conversation.messages.where(role: "user").count >= MAX_USER_MESSAGES
-      errors.add(:content, "Vous ne pouvez utilisez que #{MAX_USER_MESSAGES} messages par conversation.")
-    end
+  def broadcast_append_to_conversation
+    broadcast_append_to conversation, target: "messages", partial: "messages/message", locals: { message: self }
   end
 end
