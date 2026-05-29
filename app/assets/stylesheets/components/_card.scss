@@ -20,7 +20,8 @@
 }
 
 .game-card {
-  background: $white;
+  background: white;
+  color: $bg-footer;
   border: 5px solid transparent;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -44,4 +45,13 @@
 
 .bouton-card {
 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4)!important;
+}
+
+.titre-index_cr {
+  margin-top: 1.5em;
+}
+
+.sous-titre-index-cr span {
+  color: $purple;
+  font-weight: bold;
 }

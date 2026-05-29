@@ -3,7 +3,7 @@
 <h1>Conversations#show</h1>
 <%= link_to "← #{@conversation.game.name}", game_path(@conversation.game) %>
 
-<h1 id="titre"><%= @conversation.title %></h1>
+  <h3 id="titre" class="mt-2 ms-3"><%= @conversation.title %></h3>
 
 <div id="messages">
   <%= render @conversation.messages, messages: @conversation.messages %>

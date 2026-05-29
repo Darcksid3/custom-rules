@@ -13,6 +13,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
-    @conversation = @game.conversations.where(user: current_user)
+    @conversations = @game.conversations.where(user: current_user)
+    @custom_rules = @game.custom_rules
   end
 end

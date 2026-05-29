@@ -35,3 +35,54 @@
   opacity: 0.1;
   fill:$Anthracite
 }
+
+
+.card.game-show-card {
+  background-color: $white;
+  height: auto;
+  min-height: auto;
+  overflow: visible;
+}
+
+.game-show-card .card-body {
+  padding: 28px;
+}
+
+.game-show-card p,
+.game-show-card li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.game-show-card h1 {
+  font-size: 2.4rem;
+}
+
+.game-show-card h2 {
+  font-size: 2rem;
+}
+
+.game-show-real-rules {
+  height: auto;
+}
+
+.game-show-real-rules .card-body {
+  overflow-wrap: anywhere;
+}
+
+.game-show-custom-rules {
+  height: auto;
+  min-height: 100%;
+}
+
+.game-show-custom-rules .card-body {
+  overflow-wrap: anywhere;
+}
+
+.game-show-action-box {
+  margin-top: 24px;
+  padding: 32px;
+  border: 1px solid $lightgray;
+  border-radius: 20px;
+  background-color: $sweetgrey;
+}
